@@ -1,7 +1,13 @@
-﻿namespace CarRentalAPI.Domain.Entities
+﻿using CarRentalAPI.Domain.Entities.Common;
+
+namespace CarRentalAPI.Domain.Entities
 {
-    public class Car : BaseEntity
+    public class Car 
     {
+        public int Id { get; set; }
+        public string CreatedDate { get; set; }
+        public string? UpdatedDate { get; set; }
+        public bool IsDeleted { get; set; } = false;
         public string Brand { get; set; }
         public string Model { get; set; }
         public string Version { get; set; }
